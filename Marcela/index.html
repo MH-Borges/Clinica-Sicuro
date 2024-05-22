@@ -40,8 +40,8 @@
     <script defer src="js/script.js"></script>
 </head>
 <body>
-    <header class="menu">
-        <ul>
+    <header>
+        <ul class="menu">
             <li><a class="links" href="#home"><h1>Marcela Schimaneski</h1></a></li>
 
             <li><a class="links" href="#servicos">Serviços</a></li>
@@ -50,11 +50,25 @@
             <li><a class="links" href="#sessoes">Sessões</a></li>
             <li><a class="links" href="#faq">FAQ</a></li>
 
-            <a class="whats" href="" target="_blank">Entre em contato <img src="assets/icons/whats.svg" onload="SVGInject(this)"></a>
+            <li><a href="#" target="_blank">Entre em contato <img src="assets/icons/whats.svg" onload="SVGInject(this)"></a></li>
         </ul>
     </header>
     <main>
-        <section id="home"></section>
+        <section id="home">
+            <img src="assets/bg_home.webp" id="bg_home" alt="">
+            <div id="imgsBlock">
+                <img src="assets/home.webp" alt="">
+                <img src="assets/icons/folhas.svg" onload="SVGInject(this)">
+            </div>
+            <div id="infosBlock">
+                <h2>Todos nós precisamos de um lugar seguro onde possamos nos sentir protegidos e acolhidos.</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ipsum consequat nisl vel pretium lectus quam id. Duis convallis convallis tellus id interdum velit nisl vel pretium lectus. <br><b>Amet consectetur adipiscing elit pellentesque habitant morbi tristique.</b></p>
+                <div class="btns">
+                    <a class="btn" href="#" target="_blank">Agendar horário</a>
+                    <a class="btn links" href="#sobre">Conhecer mais</a>
+                </div>
+            </div>
+        </section>
         <section id="servicos"></section>
         <section id="sobre"></section>
         <section id="beneficios"></section>

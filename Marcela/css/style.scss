@@ -1,8 +1,6 @@
 @import 'colors_fonts';
 @import 'base';
 
-.modal{ --bs-modal-width: auto; }
-
 body {
     display: flex;
     justify-content: center;
@@ -13,7 +11,113 @@ body {
     overflow-x: hidden;
     position: relative;
     header{
-
+        position: fixed;
+        left: 0;
+        width: 100%;
+        height: 125px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 999;
+        .menu{
+            width: 90%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            li{
+                height: 90%;
+                display: flex;
+                align-items: center;
+                margin: 0 0.35vw;
+                a{
+                    padding: 0.75vh 0.5vw;
+                    font-family: $Second-font;
+                    font-weight: 500;
+                    font-size: 1.1vw;
+                    color: $Azul;
+                    transition: ease-in-out 0.25s all;
+                    &:hover{
+                        color: $Laranja;
+                        transform: scale(1.15);
+                    }
+                }
+                &:first-child{
+                    margin: 0;
+                    margin-right: auto;
+                    width: 13vw;
+                    a{
+                        all: unset;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: left;
+                        h1{
+                            font-family: $Main-font;
+                            font-size: 2.5vw;
+                            line-height: 3.75vh;
+                            color: $Laranja;
+                            &:hover{
+                                color: $Azul;
+                            }
+                        }
+                    }
+                }
+                &:last-child{
+                    margin: 0;
+                    margin-left: 6vw;
+                    a{
+                        all: unset;
+                        margin-right: -0.6vw;
+                        display: flex;
+                        align-items: center;
+                        background-color: $Roxo;
+                        height: 35%;
+                        padding: 0 3.25vw 0 1vw;
+                        border-radius: 2vw;
+                        font-family: $Second-font;
+                        font-weight: 700;
+                        font-size: 1.15vw;
+                        color: $Creme;
+                        position: relative;
+                        transition: ease-in-out 0.25s all;
+                        img, svg{
+                            right: 0.75vw;
+                            top: 5%;
+                            position: absolute;
+                            height: 90%;
+                            width: 1.35vw;
+                        }
+                        &:hover{
+                            transform: scale(1.05);
+                        }
+                    }
+                }
+            }
+            &::before{
+                content: '';
+                transition: ease-in-out 0.25s all;
+            }
+        }
+        .color{
+            &::before{
+                content: '';
+                position: absolute;
+                width: 111%;
+                height: 100%;
+                left: -6%;
+                top: 0;
+                background: $Roxo !important;
+                z-index: -1;
+                transition: ease-in-out 0.25s all;
+            }
+            li{
+                a{ color: $Creme; transition: ease-in-out 0.25s all;}
+                &:first-child{ a{ h1{ color: $Laranja; transition: ease-in-out 0.25s all; } } }
+                &:last-child{ a{ background-color: $Laranja; transition: ease-in-out 0.25s all; } }
+            }
+        }
     }
     main{
         width: 100%;
@@ -26,6 +130,99 @@ body {
         section{
             width: 90%;
             height: 100vh;
+        }
+        #home{
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 125px;
+            #bg_home{
+                position: absolute;
+                width: 111%;
+                height: 100%;
+                z-index: -1;
+                top: 0;
+                left: -6%;
+            }
+            #imgsBlock{
+                width: 32%;
+                height: 100%;
+                position: relative;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    padding: 7.5vh 0;
+                    object-fit: contain;
+                }
+                svg{
+                    position: absolute;
+                    width: 100%;
+                    height: auto;
+                    bottom: 2vh;
+                    left: 0;
+                }
+            }
+            #infosBlock{
+                width: 68%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                h2{
+                    height: 15%;
+                    width: 100%;
+                    text-align: right;
+                    padding-left: 10vw;
+                    font-family: $Second-font;
+                    font-size: 2.15vw;
+                    color: $Azul;
+                    font-weight: 700;
+                    margin-bottom: 8vh;
+                    line-height: 7vh;
+                }
+                p{
+                    padding-left: 20vw;
+                    height: 25%;
+                    width: 100%;
+                    text-align: right;
+                    font-family: $Second-font;
+                    font-size: 1.15vw;
+                    color: $Azul;
+                    font-weight: 400;
+                    line-height: 5vh;
+                    margin-bottom: 5vh;
+                }
+                .btns{
+                    height: 7%;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: right;
+                    a{
+                        all: unset;
+                        width: 12.5vw;
+                        height: 70%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-family: $Second-font;
+                        font-weight: 700;
+                        font-size: 1.1vw;
+                        color: $Creme;
+                        background-color: $Roxo;
+                        border-radius: 5vw;
+                        transition: ease-in-out 0.25s all;
+                        &:first-child{
+                            background-color: $Laranja;
+                            margin-right: 2vw;
+                        }
+                        &:hover{
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+            }
         }
     }
     footer{
@@ -58,6 +255,4 @@ body {
 
 /*--------------------------------- Responsive Media Quaries -----------------------------*/
 /* MOBILE */
-@media only screen and (max-width: 479px){
-    
-}
+@media only screen and (max-width: 479px){}

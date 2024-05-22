@@ -2,17 +2,16 @@ document.addEventListener( 'DOMContentLoaded', function() {
     document.getElementById("data_footer").textContent = new Date().getFullYear();
 
     //galeria
-    new Splide( '.splide', {
-        perPage: 3,
-        focus  : 0
-    }).mount();
-
+    // new Splide( '.splide', {
+    //     perPage: 3,
+    //     focus  : 0
+    // }).mount();
 });
 
 window.addEventListener('scroll', function() {
     //menu fixo
-    if(window.pageYOffset > 950){ document.querySelector(".menu").classList.add('fixed'); }
-    else{ document.querySelector(".menu").classList.remove('fixed'); }
+    if(window.pageYOffset > 150){ document.querySelector(".menu").classList.add('color'); }
+    else{ document.querySelector(".menu").classList.remove('color'); }
 });
 
 //Scroll Menu
@@ -23,12 +22,12 @@ function scrollToIdOnClick(event) {
         if(event.currentTarget.getAttribute('href') == '#home'){
             var targetOffset = targetElement.offsetTop;
         }else{
-            var targetOffset = targetElement.offsetTop - 150;
+            var targetOffset = targetElement.offsetTop - 125;
         }
         smoothScrollTo(0, targetOffset);
     }
 }
-function smoothScrollTo(endX, endY, duration = 600) {
+function smoothScrollTo(endX, endY, duration = 500) {
     const startX = window.scrollX || window.pageXOffset;
     const startY = window.scrollY || window.pageYOffset;
     const distanceX = endX - startX;

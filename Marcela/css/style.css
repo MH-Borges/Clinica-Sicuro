@@ -19,7 +19,7 @@
   border-radius: 10vw;
 }
 
-p, span, h1, h2, h3, h4, h5, h6 {
+p, span, ul, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
 }
@@ -32,10 +32,6 @@ p, span, h1, h2, h3, h4, h5, h6 {
           user-select: none !important;
 }
 
-.modal {
-  --bs-modal-width: auto;
-}
-
 body {
   display: flex;
   justify-content: center;
@@ -45,6 +41,120 @@ body {
   background: #EEE8DC;
   overflow-x: hidden;
   position: relative;
+}
+body header {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 125px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+body header .menu {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body header .menu li {
+  height: 90%;
+  display: flex;
+  align-items: center;
+  margin: 0 0.35vw;
+}
+body header .menu li a {
+  padding: 0.75vh 0.5vw;
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  font-size: 1.1vw;
+  color: #0C1E8E;
+  transition: ease-in-out 0.25s all;
+}
+body header .menu li a:hover {
+  color: #E4754A;
+  transform: scale(1.15);
+}
+body header .menu li:first-child {
+  margin: 0;
+  margin-right: auto;
+  width: 13vw;
+}
+body header .menu li:first-child a {
+  all: unset;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+body header .menu li:first-child a h1 {
+  font-family: "Aladin", system-ui;
+  font-size: 2.5vw;
+  line-height: 3.75vh;
+  color: #E4754A;
+}
+body header .menu li:first-child a h1:hover {
+  color: #0C1E8E;
+}
+body header .menu li:last-child {
+  margin: 0;
+  margin-left: 6vw;
+}
+body header .menu li:last-child a {
+  all: unset;
+  margin-right: -0.6vw;
+  display: flex;
+  align-items: center;
+  background-color: #7364CB;
+  height: 35%;
+  padding: 0 3.25vw 0 1vw;
+  border-radius: 2vw;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  font-size: 1.15vw;
+  color: #EEE8DC;
+  position: relative;
+  transition: ease-in-out 0.25s all;
+}
+body header .menu li:last-child a img, body header .menu li:last-child a svg {
+  right: 0.75vw;
+  top: 5%;
+  position: absolute;
+  height: 90%;
+  width: 1.35vw;
+}
+body header .menu li:last-child a:hover {
+  transform: scale(1.05);
+}
+body header .menu::before {
+  content: "";
+  transition: ease-in-out 0.25s all;
+}
+body header .color::before {
+  content: "";
+  position: absolute;
+  width: 111%;
+  height: 100%;
+  left: -6%;
+  top: 0;
+  background: #7364CB !important;
+  z-index: -1;
+  transition: ease-in-out 0.25s all;
+}
+body header .color li a {
+  color: #EEE8DC;
+  transition: ease-in-out 0.25s all;
+}
+body header .color li:first-child a h1 {
+  color: #E4754A;
+  transition: ease-in-out 0.25s all;
+}
+body header .color li:last-child a {
+  background-color: #E4754A;
+  transition: ease-in-out 0.25s all;
 }
 body main {
   width: 100%;
@@ -58,6 +168,100 @@ body main {
 body main section {
   width: 90%;
   height: 100vh;
+}
+body main #home {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 125px;
+}
+body main #home #bg_home {
+  position: absolute;
+  width: 111%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: -6%;
+}
+body main #home #imgsBlock {
+  width: 32%;
+  height: 100%;
+  position: relative;
+}
+body main #home #imgsBlock img {
+  width: 100%;
+  height: 100%;
+  padding: 7.5vh 0;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+body main #home #imgsBlock svg {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  bottom: 2vh;
+  left: 0;
+}
+body main #home #infosBlock {
+  width: 68%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body main #home #infosBlock h2 {
+  height: 15%;
+  width: 100%;
+  text-align: right;
+  padding-left: 10vw;
+  font-family: "Jost", sans-serif;
+  font-size: 2.15vw;
+  color: #0C1E8E;
+  font-weight: 700;
+  margin-bottom: 8vh;
+  line-height: 7vh;
+}
+body main #home #infosBlock p {
+  padding-left: 20vw;
+  height: 25%;
+  width: 100%;
+  text-align: right;
+  font-family: "Jost", sans-serif;
+  font-size: 1.15vw;
+  color: #0C1E8E;
+  font-weight: 400;
+  line-height: 5vh;
+  margin-bottom: 5vh;
+}
+body main #home #infosBlock .btns {
+  height: 7%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+body main #home #infosBlock .btns a {
+  all: unset;
+  width: 12.5vw;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  font-size: 1.1vw;
+  color: #EEE8DC;
+  background-color: #7364CB;
+  border-radius: 5vw;
+  transition: ease-in-out 0.25s all;
+}
+body main #home #infosBlock .btns a:first-child {
+  background-color: #E4754A;
+  margin-right: 2vw;
+}
+body main #home #infosBlock .btns a:hover {
+  transform: scale(1.1);
 }
 body footer {
   bottom: 0;
