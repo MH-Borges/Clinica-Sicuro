@@ -1,0 +1,63 @@
+@import 'colors_fonts';
+@import 'base';
+
+.modal{ --bs-modal-width: auto; }
+
+body {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    min-height: 100vh;
+    height: auto;
+    background: $Creme;
+    overflow-x: hidden;
+    position: relative;
+    header{
+
+    }
+    main{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        overflow-x: hidden;
+        position: relative;
+        section{
+            width: 90%;
+            height: 100vh;
+        }
+    }
+    footer{
+        bottom: 0;
+        left: 5%;
+        position: absolute;
+        width: 90%;
+        height: 7vh;
+        border-top: 5px solid $Creme;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p{
+            font-family: $Main-font;
+            font-weight: 800;
+            font-size: 0.9vw;
+            color: $Creme;
+        }
+        a{
+            width: 7.5vw;
+            height: 65%;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+}
+
+/*--------------------------------- Responsive Media Quaries -----------------------------*/
+/* MOBILE */
+@media only screen and (max-width: 479px){
+    
+}

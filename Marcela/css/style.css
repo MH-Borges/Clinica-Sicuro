@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Aladin&family=Jost:wght@100..900&display=swap");
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box !important;
+  text-decoration: none !important;
+  list-style: none;
+}
+
+::-webkit-scrollbar {
+  width: 0.7vw;
+  background: #E4754A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7364CB;
+  border-radius: 10vw;
+}
+
+p, span, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+.hide {
+  opacity: 0 !important;
+  display: none !important;
+  -webkit-user-select: none !important;
+     -moz-user-select: none !important;
+          user-select: none !important;
+}
+
+.modal {
+  --bs-modal-width: auto;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  min-height: 100vh;
+  height: auto;
+  background: #EEE8DC;
+  overflow-x: hidden;
+  position: relative;
+}
+body main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  overflow-x: hidden;
+  position: relative;
+}
+body main section {
+  width: 90%;
+  height: 100vh;
+}
+body footer {
+  bottom: 0;
+  left: 5%;
+  position: absolute;
+  width: 90%;
+  height: 7vh;
+  border-top: 5px solid #EEE8DC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body footer p {
+  font-family: "Aladin", system-ui;
+  font-weight: 800;
+  font-size: 0.9vw;
+  color: #EEE8DC;
+}
+body footer a {
+  width: 7.5vw;
+  height: 65%;
+}
+body footer a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+/*--------------------------------- Responsive Media Quaries -----------------------------*/
+/* MOBILE *//*# sourceMappingURL=style.css.map */
