@@ -3,11 +3,11 @@ document.addEventListener( 'DOMContentLoaded', function() {
     if(window.pageYOffset > 150){ document.querySelector(".menu").classList.add('color'); }
 
     // galeria
-    // new Splide( '.splide', {
-    //     type   : 'loop',
-    //     perPage: 3,
-    //     focus  : 'center'
-    // }).mount();
+    new Splide( '.splide', {
+        type   : 'loop',
+        perPage: 3,
+        focus  : 'center'
+    }).mount();
 });
 
 window.addEventListener('scroll', function() {
@@ -55,41 +55,42 @@ function smoothScrollTo(endX, endY, duration = 500) {
 }
 
 //formulario
-// $(document).ready(function () {
-//     $('#telefone').mask('(00) 00000 - 0000');
+$(document).ready(function () {
+    $('#telefone').mask('(00) 00000 - 0000');
 
-//     $('#btn_form').click(function (e) {
-//         $('#nome').prop('required',false);
-//         $('#email').prop('required',false);
-//         $('#telefone').prop('required',false);
-//     });
+    $('#btn_form').click(function (e) {
+        $('#nome').prop('required',false);
+        $('#email').prop('required',false);
+        $('#telefone').prop('required',false);
+        $('#mensagem').prop('required',false);
+    });
 
-//     $('#formulario').submit(function (e) {
-//         e.preventDefault();
-//         $('#msg_form').text('');
-//         $('#msg_form').removeClass('text-danger');
-//         $('#msg_form').removeClass('text-success');
-//         $.ajax({
-//             url: "email.php",
-//             method: "post",
-//             data: $('form').serialize(),
-//             dataType: "text",
-//             success: function (msg) {
-//                 if (msg.trim() === 'Formulario enviado com sucesso! Entraremos em contato em breve, obrigado por nos escolher!') {
-//                     $('#msg_form').addClass('text-success');
-//                     $('#msg_form').text(msg);
-//                     setTimeout(() => { window.location.reload(); }, 5000)
-//                 }
-//                 else if (msg.trim() == "Preencha o campo de 'Nome completo'" || msg.trim() == 'Preencha o campo de E-mail' || msg.trim() == 'Por favor selecione uma planta') {
-//                     $('#msg_form').addClass('text-danger');
-//                     $('#msg_form').text(msg);
-//                 }
-//                 else{
-//                     $('#msg_form').removeClass('text-success');
-//                     $('#msg_form').addClass('text-danger');
-//                     $('#msg_form').text('Erro ao enviar o formulario, provaveis problemas com o servidor, você pode tentar nos mandar mensagem via Instagram ou Whatsapp');
-//                 }
-//             }
-//         })
-//     });
-// });
+    $('#formulario').submit(function (e) {
+        e.preventDefault();
+        $('#msg_form').text('');
+        $('#msg_form').removeClass('text-danger');
+        $('#msg_form').removeClass('text-success');
+        $.ajax({
+            url: "email.php",
+            method: "post",
+            data: $('form').serialize(),
+            dataType: "text",
+            success: function (msg) {
+                if (msg.trim() === 'Formulario enviado com sucesso! Entraremos em contato em breve, obrigado por nos escolher!') {
+                    $('#msg_form').addClass('text-success');
+                    $('#msg_form').text(msg);
+                    setTimeout(() => { window.location.reload(); }, 5000)
+                }
+                else if (msg.trim() == "Preencha o campo de 'Nome completo'" || msg.trim() == 'Preencha o campo de E-mail' || msg.trim() == 'Por favor selecione uma planta') {
+                    $('#msg_form').addClass('text-danger');
+                    $('#msg_form').text(msg);
+                }
+                else{
+                    $('#msg_form').removeClass('text-success');
+                    $('#msg_form').addClass('text-danger');
+                    $('#msg_form').text('Erro ao enviar o formulario, provaveis problemas com o servidor, você pode tentar nos mandar mensagem via Instagram ou Whatsapp');
+                }
+            }
+        })
+    });
+});

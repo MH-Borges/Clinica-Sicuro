@@ -184,33 +184,33 @@ body main #home #bg_home {
   top: 0;
   left: -6%;
 }
-body main #home #imgsBlock {
+body main #home .imgsBlock {
   width: 32%;
   height: 100%;
   position: relative;
 }
-body main #home #imgsBlock img {
+body main #home .imgsBlock img {
   width: 100%;
   height: 100%;
   padding: 7.5vh 0;
   -o-object-fit: contain;
      object-fit: contain;
 }
-body main #home #imgsBlock svg {
+body main #home .imgsBlock svg {
   position: absolute;
   width: 100%;
   height: auto;
   bottom: 2vh;
   left: 0;
 }
-body main #home #infosBlock {
+body main #home .infosBlock {
   width: 68%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-body main #home #infosBlock h2 {
+body main #home .infosBlock h2 {
   height: 15%;
   width: 100%;
   text-align: right;
@@ -222,7 +222,7 @@ body main #home #infosBlock h2 {
   margin-bottom: 8vh;
   line-height: 7vh;
 }
-body main #home #infosBlock p {
+body main #home .infosBlock p {
   padding-left: 20vw;
   height: 25%;
   width: 100%;
@@ -234,14 +234,14 @@ body main #home #infosBlock p {
   line-height: 5vh;
   margin-bottom: 5vh;
 }
-body main #home #infosBlock .btns {
+body main #home .infosBlock .btns {
   height: 7%;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: right;
 }
-body main #home #infosBlock .btns a {
+body main #home .infosBlock .btns a {
   all: unset;
   width: 12.5vw;
   height: 70%;
@@ -256,11 +256,11 @@ body main #home #infosBlock .btns a {
   border-radius: 5vw;
   transition: ease-in-out 0.25s all;
 }
-body main #home #infosBlock .btns a:first-child {
+body main #home .infosBlock .btns a:first-child {
   background-color: #E4754A;
   margin-right: 2vw;
 }
-body main #home #infosBlock .btns a:hover {
+body main #home .infosBlock .btns a:hover {
   transform: scale(1.1);
 }
 body main #servicos {
@@ -291,7 +291,7 @@ body main #servicos h3 {
   text-align: center;
   line-height: 3vh;
 }
-body main #servicos #cardBlock {
+body main #servicos .cardBlock {
   width: 100%;
   height: 75%;
   perspective: 1000px;
@@ -300,7 +300,7 @@ body main #servicos #cardBlock {
   align-items: center;
   justify-content: center;
 }
-body main #servicos #cardBlock .flip-card {
+body main #servicos .cardBlock .flip-card {
   width: 25%;
   height: 42%;
   position: relative;
@@ -308,10 +308,10 @@ body main #servicos #cardBlock .flip-card {
   transition: all ease-in-out 0.75s;
   margin: 1.5vw;
 }
-body main #servicos #cardBlock .flip-card:hover, body main #servicos #cardBlock .flip-card:focus-within {
+body main #servicos .cardBlock .flip-card:hover, body main #servicos .cardBlock .flip-card:focus-within {
   transform: rotateY(180deg);
 }
-body main #servicos #cardBlock .flip-card .card-front, body main #servicos #cardBlock .flip-card .card-back {
+body main #servicos .cardBlock .flip-card .card-front, body main #servicos .cardBlock .flip-card .card-back {
   width: 100%;
   height: 82%;
   display: flex;
@@ -324,21 +324,21 @@ body main #servicos #cardBlock .flip-card .card-front, body main #servicos #card
   backface-visibility: hidden;
   border-radius: 1vw;
 }
-body main #servicos #cardBlock .flip-card .card-front {
+body main #servicos .cardBlock .flip-card .card-front {
   z-index: 3;
   transform: rotateY(0deg);
 }
-body main #servicos #cardBlock .flip-card .card-front img, body main #servicos #cardBlock .flip-card .card-front svg {
+body main #servicos .cardBlock .flip-card .card-front img, body main #servicos .cardBlock .flip-card .card-front svg {
   position: absolute;
   top: -7%;
   width: 4.25vw;
   height: auto;
   z-index: 3;
 }
-body main #servicos #cardBlock .flip-card .card-front img path, body main #servicos #cardBlock .flip-card .card-front svg path {
+body main #servicos .cardBlock .flip-card .card-front img path, body main #servicos .cardBlock .flip-card .card-front svg path {
   fill: #E4754A;
 }
-body main #servicos #cardBlock .flip-card .card-front::before {
+body main #servicos .cardBlock .flip-card .card-front::before {
   content: "";
   position: absolute;
   width: 7.5vw;
@@ -349,7 +349,7 @@ body main #servicos #cardBlock .flip-card .card-front::before {
   top: -20%;
   z-index: -1;
 }
-body main #servicos #cardBlock .flip-card .card-front h4 {
+body main #servicos .cardBlock .flip-card .card-front h4 {
   width: 100%;
   height: 100%;
   padding: 2vw;
@@ -360,11 +360,11 @@ body main #servicos #cardBlock .flip-card .card-front h4 {
   font-weight: 700;
   color: #EEE8DC;
 }
-body main #servicos #cardBlock .flip-card .card-back {
+body main #servicos .cardBlock .flip-card .card-back {
   z-index: 2;
   transform: rotateY(180deg);
 }
-body main #servicos #cardBlock .flip-card .card-back p {
+body main #servicos .cardBlock .flip-card .card-back p {
   width: 100%;
   height: 100%;
   padding: 2vw;
@@ -378,7 +378,7 @@ body main #servicos #cardBlock .flip-card .card-back p {
   justify-content: center;
   z-index: 999;
 }
-body main #servicos #cardBlock .flip-card .card-back::before {
+body main #servicos .cardBlock .flip-card .card-back::before {
   content: "";
   position: absolute;
   width: 7.5vw;
@@ -389,7 +389,7 @@ body main #servicos #cardBlock .flip-card .card-back::before {
   top: -20%;
   z-index: 1;
 }
-body main #servicos #cardBlock .flip-card .card-back::after {
+body main #servicos .cardBlock .flip-card .card-back::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -400,35 +400,219 @@ body main #servicos #cardBlock .flip-card .card-back::after {
   border-radius: 1vw;
   z-index: 2;
 }
-body main #servicos #cardBlock .flip-card:nth-child(2), body main #servicos #cardBlock .flip-card:nth-child(5) {
+body main #servicos .cardBlock .flip-card:nth-child(2), body main #servicos .cardBlock .flip-card:nth-child(5) {
   margin-top: -8vh;
 }
-body footer {
-  bottom: 0;
-  left: 5%;
+body main #sobre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+body main #sobre .infosBlock {
+  width: 68%;
+  display: flex;
+  flex-direction: column;
+}
+body main #sobre .infosBlock h2 {
+  font-family: "Aladin", system-ui;
+  font-size: 3.5vw;
+  color: #0C1E8E;
+}
+body main #sobre .infosBlock p {
+  font-family: "Jost", sans-serif;
+  font-size: 1.1vw;
+  color: #0C1E8E;
+  font-weight: 400;
+  padding: 2.5vh 14vw 2.5vh 0;
+  line-height: 4vh;
+}
+body main #sobre .infosBlock h3 {
+  font-family: "Jost", sans-serif;
+  font-size: 1.25vw;
+  color: #0C1E8E;
+  font-weight: 600;
+}
+body main #sobre .infosBlock ul li {
+  list-style: disc;
+  font-family: "Jost", sans-serif;
+  font-size: 0.9vw;
+  font-weight: 400;
+  color: #0C1E8E;
+  margin: 1vh 0;
+  margin-left: 2vw;
+}
+body main #sobre .infosBlock .btn {
+  all: unset;
+  display: flex;
+  align-items: center;
+  width: 10.5vw;
+  margin-left: auto;
+  margin-right: 10vw;
+  border-radius: 2vw;
+  padding: 0.75vh 1.25vw;
+  background-color: #E4754A;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  font-size: 1vw;
+  color: #EEE8DC;
+  position: relative;
+  transition: ease-in-out 0.25s all;
+}
+body main #sobre .infosBlock .btn img, body main #sobre .infosBlock .btn svg {
+  right: 0.75vw;
+  top: 5%;
   position: absolute;
-  width: 90%;
-  height: 7vh;
-  border-top: 5px solid #EEE8DC;
+  height: 90%;
+  width: 1.35vw;
+}
+body main #sobre .infosBlock .btn:hover {
+  transform: scale(1.05);
+}
+body main #sobre .imgsBlock {
+  width: 32%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+body main #sobre .imgsBlock img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body main #sobre .imgsBlock svg {
+  width: 125%;
+  height: auto;
+  position: absolute;
+  bottom: 15%;
+  left: -12.5%;
+}
+body main #beneficios {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body main #beneficios #bg_beneficios {
+  position: absolute;
+  width: 111%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: -6%;
+}
+body main #beneficios h2 {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-family: "Aladin", system-ui;
+  font-size: 3vw;
+  color: #0C1E8E;
+  padding-bottom: 1vh;
+}
+body main #beneficios span {
+  width: 100%;
+  height: 15%;
+  padding: 2vh 15vw 0 15vw;
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-size: 1.2vw;
+  color: #0C1E8E;
+  text-align: center;
+  line-height: 3vh;
+}
+body main #beneficios .splide {
+  width: 100%;
+  height: 75%;
+  outline: 1px solid red;
+}
+body main #beneficios .splide .splide__arrows .splide__arrow {
+  border-radius: 0;
+  width: 2vw;
+  height: 8vh;
+  background: #EEE8DC;
+}
+body main #beneficios .splide .splide__arrows .splide__arrow svg {
+  width: 100%;
+  height: 100%;
+  padding: 0.25vw;
+  fill: #EEE8DC;
+}
+body main #beneficios .splide .splide__arrows .splide__arrow--prev {
+  left: -5vw;
+  border-radius: 2vw 0.75vw 0.75vw 2vw;
+}
+body main #beneficios .splide .splide__arrows .splide__arrow--next {
+  right: -5vw;
+  border-radius: 0.75vw 2vw 2vw 0.75vw;
+}
+body main #beneficios .splide .splide__track {
+  width: 100%;
+  height: 100%;
+}
+body main #beneficios .splide .splide__track .splide__list .splide__slide button {
+  width: 100%;
+  height: 50%;
+  border: none;
+  background: none;
+}
+body main #beneficios .splide .splide__track .splide__list .splide__slide button img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body main #beneficios .splide .splide__pagination {
+  display: none;
+}
+body main #sessoes {
+  outline: 1px solid;
+}
+body main #faq {
+  outline: 1px solid red;
+}
+body main #agenda {
+  outline: 1px solid cyan;
+  height: 50vh;
+}
+body main #contato {
+  outline: 1px solid blueviolet;
+  padding-bottom: 9vh;
+}
+body footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 9vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #7364CB;
 }
 body footer p {
-  font-family: "Aladin", system-ui;
+  font-family: "Jost", sans-serif;
   font-weight: 800;
-  font-size: 0.9vw;
+  font-size: 1vw;
   color: #EEE8DC;
 }
 body footer a {
   width: 7.5vw;
   height: 65%;
+  margin-left: 0.75vw;
 }
-body footer a img {
+body footer a img, body footer a svg {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+body footer a img path, body footer a svg path {
+  fill: #EEE8DC;
 }
 
 /*--------------------------------- Responsive Media Quaries -----------------------------*/
