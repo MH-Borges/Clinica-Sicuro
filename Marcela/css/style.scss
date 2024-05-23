@@ -224,6 +224,144 @@ body {
                 }
             }
         }
+        #servicos{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            h2{
+                width: 100%;
+                height: 10%;
+                display: flex;
+                align-items: flex-end;
+                justify-content: center;
+                font-family: $Main-font;
+                font-size: 3vw;
+                color: $Azul;
+                padding-bottom: 1vh;
+            }
+            h3{
+                width: 100%;
+                height: 15%;
+                padding: 2vh 15vw 0 15vw;
+                font-family: $Second-font;
+                font-weight: 400;
+                font-size: 1.2vw;
+                color: $Azul;
+                text-align: center;
+                line-height: 3vh;
+            }
+            #cardBlock{
+                width: 100%;
+                height: 75%;
+                perspective: 1000px;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                .flip-card {
+                    width: 25%;
+                    height: 42%;
+                    position: relative;
+                    transform-style: preserve-3d;
+                    transition: all ease-in-out 0.75s;
+                    margin: 1.5vw;
+                    &:hover, &:focus-within{
+                        transform: rotateY(180deg);
+                    }
+                    .card-front, .card-back {
+                        width: 100%;
+                        height: 82%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        background: $Roxo;
+                        backface-visibility: hidden;
+                        border-radius: 1vw;
+                    }
+                    .card-front {
+                        z-index: 3;
+                        transform: rotateY(0deg);
+                        img,svg{
+                            position: absolute;
+                            top: -7%;
+                            width: 4.25vw;
+                            height: auto;
+                            z-index: 3;
+                            path{ fill: $Laranja; }
+                        }
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            width: 7.5vw;
+                            height: 7.5vw;
+                            border-radius: 50%;
+                            border: 3px solid $Laranja;
+                            background-color: $Creme;
+                            top: -20%;
+                            z-index: -1;
+                        }
+                        h4{
+                            width: 100%;
+                            height: 100%;
+                            padding: 2vw;
+                            padding-top: 12vh;
+                            text-align: center;
+                            font-family: $Second-font;
+                            font-size: 1.5vw;
+                            font-weight: 700;
+                            color: $Creme;
+                        }
+                    }
+                    .card-back {
+                        z-index: 2;
+                        transform: rotateY(180deg);
+                        p{
+                            width: 100%;
+                            height: 100%;
+                            padding: 2vw;
+                            text-align: center;
+                            font-family: $Second-font;
+                            font-size: 1vw;
+                            font-weight: 400;
+                            color: $Creme;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            z-index: 999;
+                        }
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            width: 7.5vw;
+                            height: 7.5vw;
+                            border-radius: 50%;
+                            border: 3px solid $Laranja;
+                            background-color: $Creme;
+                            top: -20%;
+                            z-index: 1;
+                        }
+                        &::after{
+                            content: '';
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            top: 0;
+                            left: 0;
+                            background-color: $Roxo;
+                            border-radius: 1vw;
+                            z-index: 2;
+                        }
+                    }
+                    &:nth-child(2), &:nth-child(5){
+                        margin-top: -8vh;
+                    }
+                }
+            }
+        }
     }
     footer{
         bottom: 0;

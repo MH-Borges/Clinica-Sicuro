@@ -1,5 +1,6 @@
 document.addEventListener( 'DOMContentLoaded', function() {
     document.getElementById("data_footer").textContent = new Date().getFullYear();
+    if(window.pageYOffset > 150){ document.querySelector(".menu").classList.add('color'); }
 
     //galeria
     // new Splide( '.splide', {

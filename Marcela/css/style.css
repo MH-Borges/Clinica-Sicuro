@@ -263,6 +263,146 @@ body main #home #infosBlock .btns a:first-child {
 body main #home #infosBlock .btns a:hover {
   transform: scale(1.1);
 }
+body main #servicos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+body main #servicos h2 {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-family: "Aladin", system-ui;
+  font-size: 3vw;
+  color: #0C1E8E;
+  padding-bottom: 1vh;
+}
+body main #servicos h3 {
+  width: 100%;
+  height: 15%;
+  padding: 2vh 15vw 0 15vw;
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  font-size: 1.2vw;
+  color: #0C1E8E;
+  text-align: center;
+  line-height: 3vh;
+}
+body main #servicos #cardBlock {
+  width: 100%;
+  height: 75%;
+  perspective: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+body main #servicos #cardBlock .flip-card {
+  width: 25%;
+  height: 42%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all ease-in-out 0.75s;
+  margin: 1.5vw;
+}
+body main #servicos #cardBlock .flip-card:hover, body main #servicos #cardBlock .flip-card:focus-within {
+  transform: rotateY(180deg);
+}
+body main #servicos #cardBlock .flip-card .card-front, body main #servicos #cardBlock .flip-card .card-back {
+  width: 100%;
+  height: 82%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #7364CB;
+  backface-visibility: hidden;
+  border-radius: 1vw;
+}
+body main #servicos #cardBlock .flip-card .card-front {
+  z-index: 3;
+  transform: rotateY(0deg);
+}
+body main #servicos #cardBlock .flip-card .card-front img, body main #servicos #cardBlock .flip-card .card-front svg {
+  position: absolute;
+  top: -7%;
+  width: 4.25vw;
+  height: auto;
+  z-index: 3;
+}
+body main #servicos #cardBlock .flip-card .card-front img path, body main #servicos #cardBlock .flip-card .card-front svg path {
+  fill: #E4754A;
+}
+body main #servicos #cardBlock .flip-card .card-front::before {
+  content: "";
+  position: absolute;
+  width: 7.5vw;
+  height: 7.5vw;
+  border-radius: 50%;
+  border: 3px solid #E4754A;
+  background-color: #EEE8DC;
+  top: -20%;
+  z-index: -1;
+}
+body main #servicos #cardBlock .flip-card .card-front h4 {
+  width: 100%;
+  height: 100%;
+  padding: 2vw;
+  padding-top: 12vh;
+  text-align: center;
+  font-family: "Jost", sans-serif;
+  font-size: 1.5vw;
+  font-weight: 700;
+  color: #EEE8DC;
+}
+body main #servicos #cardBlock .flip-card .card-back {
+  z-index: 2;
+  transform: rotateY(180deg);
+}
+body main #servicos #cardBlock .flip-card .card-back p {
+  width: 100%;
+  height: 100%;
+  padding: 2vw;
+  text-align: center;
+  font-family: "Jost", sans-serif;
+  font-size: 1vw;
+  font-weight: 400;
+  color: #EEE8DC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+body main #servicos #cardBlock .flip-card .card-back::before {
+  content: "";
+  position: absolute;
+  width: 7.5vw;
+  height: 7.5vw;
+  border-radius: 50%;
+  border: 3px solid #E4754A;
+  background-color: #EEE8DC;
+  top: -20%;
+  z-index: 1;
+}
+body main #servicos #cardBlock .flip-card .card-back::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #7364CB;
+  border-radius: 1vw;
+  z-index: 2;
+}
+body main #servicos #cardBlock .flip-card:nth-child(2), body main #servicos #cardBlock .flip-card:nth-child(5) {
+  margin-top: -8vh;
+}
 body footer {
   bottom: 0;
   left: 5%;
