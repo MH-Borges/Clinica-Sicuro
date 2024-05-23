@@ -2,10 +2,11 @@ document.addEventListener( 'DOMContentLoaded', function() {
     document.getElementById("data_footer").textContent = new Date().getFullYear();
     if(window.pageYOffset > 150){ document.querySelector(".menu").classList.add('color'); }
 
-    //galeria
+    // galeria
     // new Splide( '.splide', {
+    //     type   : 'loop',
     //     perPage: 3,
-    //     focus  : 0
+    //     focus  : 'center'
     // }).mount();
 });
 
