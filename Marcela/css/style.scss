@@ -454,6 +454,8 @@ body {
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: start;
+            padding-top: 5vh;
             #bg_beneficios{
                 position: absolute;
                 width: 111%;
@@ -475,7 +477,7 @@ body {
             }
             span{
                 width: 100%;
-                height: 15%;
+                height: 14%;
                 padding: 2vh 15vw 0 15vw;
                 font-family: $Second-font;
                 font-weight: 400;
@@ -486,45 +488,70 @@ body {
             }
             .splide{
                 width: 100%;
-                height: 75%;
-                outline: 1px solid red;
+                height: 63%;
                 .splide__arrows {
                     .splide__arrow {
                         border-radius: 0;
-                        width: 2vw;
-                        height: 8vh;
-                        background: $Creme;
+                        width: 3.25vw;
+                        height: 10vh;
+                        background: none;
                         svg{
                             width: 100%;
                             height: 100%;
-                            padding: 0.25vw;
-                            fill: $Creme;
+                            fill: $Laranja;
                         }
                     }
-                    .splide__arrow--prev{
-                        left: -5vw;
-                        border-radius: 2vw 0.75vw 0.75vw 2vw;
-                    }
-                    .splide__arrow--next{
-                        right: -5vw;
-                        border-radius: 0.75vw 2vw 2vw 0.75vw;
-
-                    }
+                    .splide__arrow--prev{ left: 0; }
+                    .splide__arrow--next{ right: 0; }
                 }
                 .splide__track{
-                    width: 100%;
+                    left: 5%;
+                    width: 90%;
                     height: 100%;
                     .splide__list{
                         .splide__slide{
-                            button{
-                                width: 100%;
-                                height: 50%;
-                                border: none;
-                                background: none;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            .cardBlock{
+                                margin: 0 5%;
+                                width: 90%;
+                                height: 100%;
+                                background-color: $Roxo;
+                                border-radius: 2vw;
+                                overflow: hidden;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
                                 img{
                                     width: 100%;
-                                    height: 100%;
+                                    height: auto;
                                     object-fit: cover;
+                                }
+                                h3{
+                                    width: 100%;
+                                    text-align: center;
+                                    font-family: $Second-font;
+                                    font-weight: 700;
+                                    font-size: 1.65vw;
+                                    color: $Creme;
+                                    margin-top: 2vh;
+                                    padding: 0 3vw;
+                                }
+                                svg{
+                                    width: 100%;
+                                    margin: 1vh 0;
+                                    padding: 2.5vh 0;
+                                }
+                                p{
+                                    width: 100%;
+                                    text-align: center;
+                                    font-family: $Second-font;
+                                    font-size: 1.1vw;
+                                    font-weight: 300;
+                                    color: $Creme;
+                                    padding: 0 3.5vw;
+                                    margin-top: 1vh;
                                 }
                             }
                         }
@@ -535,12 +562,131 @@ body {
                 }
             }
         }
-
         #sessoes{
-            outline: 1px solid;
+            position: relative;
+            padding-top: 10vh;
+            display: flex;
+            flex-direction: column;
+            .divisor{
+                position: absolute;
+                width: 111%;
+                height: auto;
+                z-index: -1;
+                top: 0;
+                left: -6%;
+            }
+            &::before{
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: -6%;
+                width: 111%;
+                height:82%;
+                background-color: $Roxo;
+                z-index: -1;
+            }
+            h2{
+                font-family: $Main-font;
+                font-size: 3.5vw;
+                color: $Creme;
+            }
+            p{
+                font-family: $Second-font;
+                font-size: 1.15vw;
+                color: $Creme;
+                font-weight: 300;
+                padding: 4vh 20vw 4vh 0;
+                line-height: 4vh;
+            }
+            ul{
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                padding-left: 2vw;
+                li{
+                    list-style: decimal;
+                    width: 21%;
+                    height: auto;
+                    margin: 5vh 2.5vw;
+                    font-family: $Second-font;
+                    font-weight: 700;
+                    font-size: 1.15vw;
+                    color: $Creme;
+                    position: relative;
+                    padding-left: 0.5vw;
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        width: 2.1vw;
+                        height: 2.1vw;
+                        top: -0.35vh;
+                        left: -2.1vw;
+                        border: 2px solid $Creme;
+                        border-radius: 50%;
+                    }
+                    &:nth-child(1), &:nth-child(4), &:nth-child(7){
+                        margin-left: 0;
+                    }
+                }
+            }
+            .btn{
+                all: unset;
+                display: flex;
+                align-items: center;
+                width: 16vw;
+                border-radius: 2vw;
+                padding: 0.75vh 1.25vw;
+                background-color: $Laranja;
+                font-family: $Second-font;
+                font-weight: 700;
+                font-size: 1vw;
+                color: $Creme;
+                position: relative;
+                transition: ease-in-out 0.25s all;
+                margin: 3vh 12vw 0 auto;
+                img, svg{
+                    right: 0.75vw;
+                    top: 5%;
+                    position: absolute;
+                    height: 90%;
+                    width: 1.35vw;
+                }
+                &:hover{
+                    transform: scale(1.05);
+                }
+            }
         }
+
         #faq{
-            outline: 1px solid red;
+            position: relative;
+            padding-top: 25vh;
+            display: flex;
+            flex-direction: column;
+            .divisor{
+                position: absolute;
+                width: 111%;
+                height: auto;
+                z-index: -1;
+                top: 0;
+                left: -6%;
+                transform: rotate(180deg);
+            }
+            h2{
+                width: 100%;
+                height: 10%;
+                display: flex;
+                align-items: flex-end;
+                justify-content: center;
+                font-family: $Main-font;
+                font-size: 3vw;
+                color: $Azul;
+                padding-bottom: 1vh;
+            }
+            .accordion{
+                outline: 1px solid green;
+                height: 100%;
+                padding: 5vh 7.5vw 0;
+            }
         }
         #agenda{
             outline: 1px solid cyan;

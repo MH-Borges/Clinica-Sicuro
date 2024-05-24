@@ -494,6 +494,8 @@ body main #beneficios {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: start;
+  padding-top: 5vh;
 }
 body main #beneficios #bg_beneficios {
   position: absolute;
@@ -516,7 +518,7 @@ body main #beneficios h2 {
 }
 body main #beneficios span {
   width: 100%;
-  height: 15%;
+  height: 14%;
   padding: 2vh 15vw 0 15vw;
   font-family: "Jost", sans-serif;
   font-weight: 400;
@@ -527,53 +529,204 @@ body main #beneficios span {
 }
 body main #beneficios .splide {
   width: 100%;
-  height: 75%;
-  outline: 1px solid red;
+  height: 63%;
 }
 body main #beneficios .splide .splide__arrows .splide__arrow {
   border-radius: 0;
-  width: 2vw;
-  height: 8vh;
-  background: #EEE8DC;
+  width: 3.25vw;
+  height: 10vh;
+  background: none;
 }
 body main #beneficios .splide .splide__arrows .splide__arrow svg {
   width: 100%;
   height: 100%;
-  padding: 0.25vw;
-  fill: #EEE8DC;
+  fill: #E4754A;
 }
 body main #beneficios .splide .splide__arrows .splide__arrow--prev {
-  left: -5vw;
-  border-radius: 2vw 0.75vw 0.75vw 2vw;
+  left: 0;
 }
 body main #beneficios .splide .splide__arrows .splide__arrow--next {
-  right: -5vw;
-  border-radius: 0.75vw 2vw 2vw 0.75vw;
+  right: 0;
 }
 body main #beneficios .splide .splide__track {
-  width: 100%;
+  left: 5%;
+  width: 90%;
   height: 100%;
 }
-body main #beneficios .splide .splide__track .splide__list .splide__slide button {
-  width: 100%;
-  height: 50%;
-  border: none;
-  background: none;
+body main #beneficios .splide .splide__track .splide__list .splide__slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-body main #beneficios .splide .splide__track .splide__list .splide__slide button img {
-  width: 100%;
+body main #beneficios .splide .splide__track .splide__list .splide__slide .cardBlock {
+  margin: 0 5%;
+  width: 90%;
   height: 100%;
+  background-color: #7364CB;
+  border-radius: 2vw;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body main #beneficios .splide .splide__track .splide__list .splide__slide .cardBlock img {
+  width: 100%;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
+}
+body main #beneficios .splide .splide__track .splide__list .splide__slide .cardBlock h3 {
+  width: 100%;
+  text-align: center;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  font-size: 1.65vw;
+  color: #EEE8DC;
+  margin-top: 2vh;
+  padding: 0 3vw;
+}
+body main #beneficios .splide .splide__track .splide__list .splide__slide .cardBlock svg {
+  width: 100%;
+  margin: 1vh 0;
+  padding: 2.5vh 0;
+}
+body main #beneficios .splide .splide__track .splide__list .splide__slide .cardBlock p {
+  width: 100%;
+  text-align: center;
+  font-family: "Jost", sans-serif;
+  font-size: 1.1vw;
+  font-weight: 300;
+  color: #EEE8DC;
+  padding: 0 3.5vw;
+  margin-top: 1vh;
 }
 body main #beneficios .splide .splide__pagination {
   display: none;
 }
 body main #sessoes {
-  outline: 1px solid;
+  position: relative;
+  padding-top: 10vh;
+  display: flex;
+  flex-direction: column;
+}
+body main #sessoes .divisor {
+  position: absolute;
+  width: 111%;
+  height: auto;
+  z-index: -1;
+  top: 0;
+  left: -6%;
+}
+body main #sessoes::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -6%;
+  width: 111%;
+  height: 82%;
+  background-color: #7364CB;
+  z-index: -1;
+}
+body main #sessoes h2 {
+  font-family: "Aladin", system-ui;
+  font-size: 3.5vw;
+  color: #EEE8DC;
+}
+body main #sessoes p {
+  font-family: "Jost", sans-serif;
+  font-size: 1.15vw;
+  color: #EEE8DC;
+  font-weight: 300;
+  padding: 4vh 20vw 4vh 0;
+  line-height: 4vh;
+}
+body main #sessoes ul {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-left: 2vw;
+}
+body main #sessoes ul li {
+  list-style: decimal;
+  width: 21%;
+  height: auto;
+  margin: 5vh 2.5vw;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  font-size: 1.15vw;
+  color: #EEE8DC;
+  position: relative;
+  padding-left: 0.5vw;
+}
+body main #sessoes ul li::before {
+  content: "";
+  position: absolute;
+  width: 2.1vw;
+  height: 2.1vw;
+  top: -0.35vh;
+  left: -2.1vw;
+  border: 2px solid #EEE8DC;
+  border-radius: 50%;
+}
+body main #sessoes ul li:nth-child(1), body main #sessoes ul li:nth-child(4), body main #sessoes ul li:nth-child(7) {
+  margin-left: 0;
+}
+body main #sessoes .btn {
+  all: unset;
+  display: flex;
+  align-items: center;
+  width: 16vw;
+  border-radius: 2vw;
+  padding: 0.75vh 1.25vw;
+  background-color: #E4754A;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  font-size: 1vw;
+  color: #EEE8DC;
+  position: relative;
+  transition: ease-in-out 0.25s all;
+  margin: 3vh 12vw 0 auto;
+}
+body main #sessoes .btn img, body main #sessoes .btn svg {
+  right: 0.75vw;
+  top: 5%;
+  position: absolute;
+  height: 90%;
+  width: 1.35vw;
+}
+body main #sessoes .btn:hover {
+  transform: scale(1.05);
 }
 body main #faq {
-  outline: 1px solid red;
+  position: relative;
+  padding-top: 25vh;
+  display: flex;
+  flex-direction: column;
+}
+body main #faq .divisor {
+  position: absolute;
+  width: 111%;
+  height: auto;
+  z-index: -1;
+  top: 0;
+  left: -6%;
+  transform: rotate(180deg);
+}
+body main #faq h2 {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-family: "Aladin", system-ui;
+  font-size: 3vw;
+  color: #0C1E8E;
+  padding-bottom: 1vh;
+}
+body main #faq .accordion {
+  outline: 1px solid green;
+  height: 100%;
+  padding: 5vh 7.5vw 0;
 }
 body main #agenda {
   outline: 1px solid cyan;
