@@ -605,7 +605,7 @@ body main #beneficios .splide .splide__pagination {
 }
 body main #sessoes {
   position: relative;
-  padding-top: 10vh;
+  padding-top: 13vh;
   display: flex;
   flex-direction: column;
 }
