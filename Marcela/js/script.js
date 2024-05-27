@@ -2,6 +2,17 @@ document.addEventListener( 'DOMContentLoaded', function() {
     document.getElementById("data_footer").textContent = new Date().getFullYear();
     if(window.pageYOffset > 150){ document.querySelector(".menu").classList.add('color'); }
 
+    //animation home
+    document.querySelector('header').style.opacity = 1;
+    document.querySelector('header').style.translate = '0 125px';
+    document.querySelector('.imgsBlock').style.opacity = 1;
+    document.querySelector('.imgsBlock').style.translate = '35vw 0';
+    document.querySelector('.infosBlock').style.opacity = 1;
+    document.querySelector('.infosBlock').style.translate = '-55vw 0';
+
+    // fade animation
+    AOS.init();
+
     // galeria
     new Splide( '.splide', {
         type   : 'loop',
@@ -76,19 +87,19 @@ $(document).ready(function () {
             data: $('form').serialize(),
             dataType: "text",
             success: function (msg) {
-                if (msg.trim() === 'Formulario enviado com sucesso! Entraremos em contato em breve, obrigado por nos escolher!') {
+                if (msg.trim() === 'Mensagem enviada com sucesso! Entrarei em contato em breve!') {
                     $('#msg_form').addClass('text-success');
                     $('#msg_form').text(msg);
                     setTimeout(() => { window.location.reload(); }, 5000)
                 }
-                else if (msg.trim() == "Preencha o campo de 'Nome completo'" || msg.trim() == 'Preencha o campo de E-mail' || msg.trim() == 'Por favor selecione uma planta') {
+                else if (msg.trim() == "Preencha o campo de 'Nome completo'" || msg.trim() == 'Preencha o campo de E-mail' || msg.trim() == 'O campo de mensagem está vazio!') {
                     $('#msg_form').addClass('text-danger');
                     $('#msg_form').text(msg);
                 }
                 else{
                     $('#msg_form').removeClass('text-success');
                     $('#msg_form').addClass('text-danger');
-                    $('#msg_form').text('Erro ao enviar o formulario, provaveis problemas com o servidor, você pode tentar nos mandar mensagem via Instagram ou Whatsapp');
+                    $('#msg_form').text('Erro ao enviar o formulario, provaveis problemas com o servidor, você pode tentar me mandar mensagem via Instagram ou Whatsapp');
                 }
             }
         })
