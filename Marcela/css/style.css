@@ -152,7 +152,7 @@ body header .color li a {
   transition: ease-in-out 0.25s all;
 }
 body header .color li:first-child a h1 {
-  color: #E4754A;
+  color: #EEE8DC;
   transition: ease-in-out 0.25s all;
 }
 body header .color li:last-child a {
@@ -675,8 +675,8 @@ body main #sessoes ul li::before {
   position: absolute;
   width: 2.1vw;
   height: 2.1vw;
-  top: -0.35vh;
-  left: -2.1vw;
+  top: -0.4vh;
+  left: -2vw;
   border: 2px solid #EEE8DC;
   border-radius: 50%;
 }

@@ -119,7 +119,7 @@ body {
             }
             li{
                 a{ color: $Creme; transition: ease-in-out 0.25s all;}
-                &:first-child{ a{ h1{ color: $Laranja; transition: ease-in-out 0.25s all; } } }
+                &:first-child{ a{ h1{ color: $Creme; transition: ease-in-out 0.25s all; } } }
                 &:last-child{ a{ background-color: $Laranja; transition: ease-in-out 0.25s all; } }
             }
         }
@@ -633,8 +633,8 @@ body {
                         position: absolute;
                         width: 2.1vw;
                         height: 2.1vw;
-                        top: -0.35vh;
-                        left: -2.1vw;
+                        top: -0.4vh;
+                        left: -2vw;
                         border: 2px solid $Creme;
                         border-radius: 50%;
                     }
